@@ -22,8 +22,8 @@
     <div class="col-md-10 col-12 mx-auto">
       <div class="card-columns">
         {{#each restaurants}}
-        <a href="/restaurants/{{this.id}}" class="text-secondary">
-          <div class="card mb-3">
+        <div class="card mb-3">
+          <a href="/restaurants/{{this.id}}" class="text-secondary">
             <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
             <div class="card-body p-3">
               <h6 class="card-title mb-1">{{this.name}}</h6>
@@ -36,10 +36,9 @@
                 {{this.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
-
             </div>
-          </div>
-        </a>
+          </a>
+        </div>
         {{/each}}
       </div>
     </div>

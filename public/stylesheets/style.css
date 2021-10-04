@@ -54,6 +54,10 @@ header {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
+.card img {
+  height: 180px;
+}
+
 .restaurant-category {
   color: #666666;
   font-size: 0.8rem;
