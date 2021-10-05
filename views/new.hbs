@@ -1,0 +1,58 @@
+<div class="container">
+  <form action="/restaurants" method="POST">
+    <div class="form-row">
+      <div class="form-group col-md-5">
+        <label for="name">中文名稱</label>
+        <input type="text" class="form-control" name="name" id="name" placeholder="e.g. Sababa 沙巴巴中東美食" required>
+      </div>
+      <div class="form-group col-md-5">
+        <label for="name_en">英文名稱</label>
+        <input type="text" class="form-control" name="name_en" id="name_en" placeholder="e.g. Sababa Pita Bar" required>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="category">類別</label>
+        <input type="text" class="form-control" name="category" id="category" placeholder="e.g. 中東料理" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="form-row">
+        <div class="form-group col-md-10">
+          <label for="phone">電話</label>
+          <input type="text" class="form-control" name="phone" id="phone" placeholder="e.g. 02 2363 8009" required>
+        </div>
+
+        <div class="form-group col-md-2">
+          <label for="rating">評分</label>
+          <input type="text" class="form-control" name="rating" id="rating" placeholder="e.g. 4.1" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="image">照片</label>
+      <input type="text" class="form-control" name="image" id="image" placeholder="e.g. https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5635/01.jpg"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="location">地址</label>
+      <input type="text" class="form-control" name="location" id="location" placeholder="e.g. 台北市羅斯福路三段 283 巷 17 號"
+        required>
+    </div>
+
+    <div class="form-group">
+      <label for="google_map">地圖</label>
+      <input type="text" class="form-control" name="google_map" id="google_map"
+        placeholder="e.g. https://goo.gl/maps/BJdmLuVdDbw" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">描述</label>
+      <textarea class="form-control" name="description" id="description"
+        placeholder="e.g. 沙巴巴批塔是台灣第一家純手工批塔專賣店,只選用最新鮮的頂級原料,以及道地的中東家傳配方。" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">儲存資料</button>
+  </form>
+</div>
