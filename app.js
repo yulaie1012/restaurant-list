@@ -77,11 +77,18 @@ app.post('/restaurants/:id/edit', (req, res) => {
 
 app.get('/search', (req, res) => {
   const keyword = req.query.keyword
-  const lowerCaseKeyword = keyword.toLowerCase()
-  const filteredRestaurants = restaurantData.filter(restaurant => restaurant.name.toLowerCase().includes(lowerCaseKeyword) || restaurant.category.toLowerCase().includes(lowerCaseKeyword)
-  )
-  res.render('index', { restaurants: filteredRestaurants, keyword: keyword })
+  const lowerCaseKeyword = keyword.trim().toLowerCase()
+  Restaurant.find({
+    $or: [
+      { name: { $regex: lowerCaseKeyword, $options: 'i' } },
+      { category: { $regex: lowerCaseKeyword, $options: 'i' } }
+    ]
+  })
+    .lean()
+    .then(restaurants => res.render('index', { restaurants, keyword }))
+    .catch(error => console.log(error))
 })
+
 
 app.listen(port, () => {
   console.log(`App listening at http://localhost:${port}`)
