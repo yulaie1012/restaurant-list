@@ -36,6 +36,14 @@
                 {{this.rating}}
                 <i class="fas fa-star fa-xs"></i>
               </span>
+
+              <div>
+                <a href="/restaurants/{{this._id}}/edit" class="card-link">編輯</a>
+              </div>
+              <form action="/restaurants/{{this._id}}/delete" method="POST">
+                <button type="submit">刪除</button>
+              </form>
+
             </div>
           </a>
         </div>
