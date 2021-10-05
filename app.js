@@ -52,6 +52,21 @@ app.get('/restaurants/:id', (req, res) => {
     .catch(error => console.log(error))
 })
 
+app.get('/restaurants/:id/edit', (req, res) => {
+  const id = req.params.id
+  Restaurant.findById(id)
+    .lean()
+    .then(restaurant => res.render('edit', { restaurant }))
+    .catch(error => console.log(error))
+})
+
+app.post('/restaurants/:id/edit', (req, res) => {
+  const id = req.params.id
+  Restaurant.findByIdAndUpdate(id, { $set: req.body })
+    .then(() => res.redirect(`/restaurants/${id}`))
+    .catch(error => console.log(error))
+})
+
 app.get('/search', (req, res) => {
   const keyword = req.query.keyword
   const lowerCaseKeyword = keyword.toLowerCase()
