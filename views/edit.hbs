@@ -2,7 +2,7 @@
   <div class="d-flex justify-content-center">
     <h1>編輯餐廳</h1>
   </div>
-  <form action="/restaurants/{{restaurant._id}}/edit" method="POST">
+  <form action="/restaurants/{{restaurant._id}}?_method=PUT" method="POST">
     <div class="form-row">
       <div class="form-group col-md-5">
         <label for="name">中文名稱</label>

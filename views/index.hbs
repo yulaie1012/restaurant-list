@@ -40,7 +40,7 @@
               <div>
                 <a href="/restaurants/{{this._id}}/edit" class="card-link">編輯</a>
               </div>
-              <form action="/restaurants/{{this._id}}/delete" method="POST">
+              <form action="/restaurants/{{this._id}}?_method=DELETE" method="POST">
                 <button type="submit">刪除</button>
               </form>
 
