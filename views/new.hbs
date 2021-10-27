@@ -25,13 +25,13 @@
         </div>
         <div class="form-group col-md-2">
           <label for="rating">評分</label>
-          <input type="text" class="form-control" name="rating" id="rating" placeholder="e.g. 4.1" required>
+          <input type="number" step="0.1" min="1" max="5" class="form-control" name="rating" id="rating" placeholder="e.g. 4.1" required>
         </div>
       </div>
     </div>
     <div class="form-group">
       <label for="image">照片</label>
-      <input type="text" class="form-control" name="image" id="image"
+      <input type="url" class="form-control" name="image" id="image"
         placeholder="e.g. https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5635/01.jpg" required>
     </div>
     <div class="form-group">
